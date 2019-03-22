@@ -1,19 +1,29 @@
 import React, { Component } from "react";
-import { Text } from 'react-native'
-import { Card } from 'react-native-elements'
-   
+import { Text, ActivityIndicator, ScrollView, View } from 'react-native'
+import { Card, Image, Header, Icon } from 'react-native-elements'
+
+
 class ImageList extends Component {
     render(){
-        const u = {spring: "https://unsplash.com/photos/Lm5rkxzgiFQ"}
-           return (
-            <Card
-                title='Blooming'
-                image={u.image}>
-                <Text style={{marginBottom: 10}}>
-                    Published on April 30, 2017
-                </Text>
-            </Card>
-           )
+        return (
+            <View>
+                <Header
+                    backgroundColor='#8A71D7'
+                    
+                    centerComponent={{ text: 'Seasons', style: { color: '#191654', fontWeight: 'bold' } }}
+                    rightComponent={{
+                        icon: 'home',
+                        color: '#191654',
+                        onPress: () => this.props.navigation.navigate('TabNav')
+                    }}
+                />                                      
+                <ScrollView>
+                {
+                    this.props.season.map(img => <Image source={img} style={{width: "100%", height: 200, marginBottom: 20 }}/>)
+                }                         
+                </ScrollView>
+            </View>
+        ) 
        }
    }
 
