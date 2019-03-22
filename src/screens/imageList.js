@@ -19,7 +19,7 @@ class ImageList extends Component {
                 />                                      
                 <ScrollView>
                 {
-                    this.props.season.map(img => <Image source={img} style={{width: "100%", height: 200, marginBottom: 20 }}/>)
+                    this.props.season.map((img, i) => <Image key={i} source={img} style={{width: "100%", height: 200, marginBottom: 5 }}/>)
                 }                         
                 </ScrollView>
             </View>
