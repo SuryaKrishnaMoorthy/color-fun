@@ -49,7 +49,7 @@ const TabNav =  createMaterialBottomTabNavigator({
                 navigationOptions: {
                   tabBarColor: '#36382E',
                   tabBarIcon: <Icon
-                    name='photo-album'
+                    name='settings'
                     color='#ffffff' />  
                 } 
               }
