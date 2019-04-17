@@ -1,6 +1,6 @@
 import React from "react";
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
-import ImageList from "../screens/ImageList";
+import ImageList from "../screens/imageList";
 import SettingsScreen from "../screens/SettingsScreen";
 import { summer, spring, autumn, winter } from "../db/db";
 import { Icon } from 'react-native-elements'
